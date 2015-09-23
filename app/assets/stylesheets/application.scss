@@ -24,9 +24,16 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Ubuntu"
+  font-family: "Ubuntu";
+  padding: 10px;
 }
 
 .news {
-  line-height: 34px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.separator {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.12);
 }
