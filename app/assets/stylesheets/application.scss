@@ -25,7 +25,8 @@ html, body {
   align-items: center;
   justify-content: center;
   font-family: "Ubuntu";
-  padding: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .news {
@@ -35,5 +36,5 @@ html, body {
 
 .separator {
   text-align: center;
-  color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.10);
 }
