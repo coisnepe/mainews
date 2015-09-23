@@ -17,7 +17,7 @@
       <div class="news">
           <ul class="list-unstyled">
             <% @events.each do |event| %>
-              <li><%= event %></li>
+              <li><%= event[0] %> (created on <%= event[1] %>)</li>
               <p class="separator"><%= "-" * 80 %></p>
             <% end %>
           </ul>
