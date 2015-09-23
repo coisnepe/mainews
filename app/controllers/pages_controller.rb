@@ -3,7 +3,6 @@ require 'nokogiri'
 
 class PagesController < ApplicationController
   def index
-    @test = 2+2
     @events = get_news
   end
 
@@ -21,5 +20,4 @@ class PagesController < ApplicationController
     end
     events_list
   end
-
 end
