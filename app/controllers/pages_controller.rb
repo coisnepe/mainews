@@ -1,23 +1,10 @@
-require 'open-uri'
-require 'nokogiri'
-
 class PagesController < ApplicationController
   def index
-    @events = get_news
-  end
-
-  def get_news
-    url = "https://en.wikipedia.org/wiki/Portal:Current_events"
-    page = Nokogiri::HTML(open(url))
-
-    news = page.css("table")[1]
-
-    events = news.css("ul")[0]
-    events_list = []
-
-    events.css("li").each do |elements|
-      events_list << elements.text
-    end
-    events_list
+    # Story.get_news
+    @events = Story.pluck(:formatted_content, :created_at)
+    @title = @events[0]
+    @date = @events[1]
   end
 end
+
+# .strftime(%A, %b %d)
