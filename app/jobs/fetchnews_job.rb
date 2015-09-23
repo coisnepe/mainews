@@ -3,6 +3,7 @@ class FetchnewsJob < ActiveJob::Base
 
   def perform(*args)
     # Do something later
+    get_news
   end
 
   def get_news
@@ -15,8 +16,8 @@ class FetchnewsJob < ActiveJob::Base
     events_list = []
 
     events.css("li").each do |elements|
-      events_list << elements.text
+      r = Story.new(content: elements, formatted_content: elements.text)
+      r.save
     end
-    events_list
   end
 end
