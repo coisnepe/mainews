@@ -5,4 +5,4 @@ class PagesController < ApplicationController
   end
 end
 
-# Wikipedia links need to be prepended with "https://en.wikipedia.org/wiki"
+# Wikipedia links need to be prepended with "https://en.wikipedia.org"
