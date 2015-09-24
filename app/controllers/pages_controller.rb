@@ -4,3 +4,5 @@ class PagesController < ApplicationController
     @events = Story.all
   end
 end
+
+# Wikipedia links need to be prepended with "https://en.wikipedia.org/wiki"
