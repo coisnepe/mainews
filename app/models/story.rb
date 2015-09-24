@@ -19,3 +19,8 @@ class Story < ActiveRecord::Base
   end
 
 end
+
+
+# Play with Wikipedia's API
+# http://en.wikipedia.org/w/api.php?action=query&titles=Ile d'Yeu&format=json
+# https://en.wikipedia.org/w/index.php?title=%C3%8Ele_d%27Yeu&curid=630868
