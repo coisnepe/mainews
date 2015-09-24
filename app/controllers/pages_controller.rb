@@ -4,5 +4,3 @@ class PagesController < ApplicationController
     @events = Story.all
   end
 end
-
-# .strftime(%A, %b %d)
