@@ -1,33 +1,39 @@
-<% if true %>
-<div class="news">
-    <table class="list-unstyled">
-      <tbody>
-        <% @events.each do |event| %>
-          <tr>
-            <td class="text-left"><%= event.content.html_safe %></td>
-            <td><%= event.created_at.strftime("%Y-%m-%d") %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-</div>
-<% end %>
-
-<% if false %>
 <div class="container">
-<h1 class="text-center">Here are the main current news</h1>
-<h3 class="text-center">(fetched from Wikipedia)</h3></br></br>
-  <div class="row">
-      <div class="news">
-          <ul class="list-unstyled">
+  <h1 class="text-center">Here are the main current news</h1>
+  <h3 class="text-center">(fetched from Wikipedia)</h3></br></br>
+
+  <% if false %>
+    <div class="news">
+        <table class="list-unstyled">
+          <tbody>
             <% @events.each do |event| %>
-              <li>
-                <span class="pull-left"><%= event.formatted_content %></span>
-                <span class="pull-right">(created on <%= event.created_at.strftime("%Y-%m-%d") %>)</span>
-              </li>
+              <tr>
+                <td class="text-left"><%= event.content.html_safe %></td>
+                <td><%= event.created_at.strftime("%Y-%m-%d") %></td>
+              </tr>
             <% end %>
-          </ul>
+          </tbody>
+        </table>
+    </div>
+  <% end %>
+
+  <% if true %>
+    <div class="container">
+      <div class="row">
+          <div class="news">
+              <ul>
+                <% @events.each do |event| %>
+                  <li>
+                      <span class="pull-left"><%= event.formatted_content %></span>
+                      <span class="pull-right">(created on <%= event.created_at.strftime("%Y-%m-%d") %>)</span>
+                  </li>
+                <% end %>
+              </ul>
+          </div>
       </div>
-  </div>
+    </div>
+  <% end %>
+
 </div>
-<% end %>
+
+
