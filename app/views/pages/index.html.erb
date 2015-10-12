@@ -1,26 +1,11 @@
-<% if false %>
-<div class="news">
-    <ul class="list-unstyled">
-      <% @events.each do |event| %>
-        <li><%= event %></li>
-        <p class="separator">----------------</p>
-      <% end %>
-    </ul>
-</div>
-<% end %>
-
-
-<div class="container">
+<% if true %>
+<%# raise %>
 <h1 class="text-center">Here are the main current news</h1>
 <h3 class="text-center">(fetched from Wikipedia)</h3></br></br>
-  <div class="row">
-      <div class="news">
-          <ul class="list-unstyled">
-            <% @events.each do |event| %>
-              <li><%= event[0] %> (created on <%= event[1] %>)</li>
-              <p class="separator"><%= "-" * 80 %></p>
-            <% end %>
-          </ul>
-      </div>
-  </div>
-</div>
+<ul class="list-unstyled">
+  <% @events.each do |event| %>
+    <li><%= event.content.html_safe %></li>
+    <p class="separator">----------------</p>
+  <% end %>
+</ul>
+<% end %>
