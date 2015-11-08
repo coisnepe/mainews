@@ -24,6 +24,9 @@ group :development, :test do
   gem 'byebug'
   gem 'binding_of_caller'
   gem 'better_errors'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 group :development do
